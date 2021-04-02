@@ -17,6 +17,7 @@ import Listeners from './listeners';
 import media from './media';
 import Ads from './plugins/ads';
 import PreviewThumbnails from './plugins/preview-thumbnails';
+import googlecast from './plugins/google-cast';
 import source from './source';
 import Storage from './storage';
 import support from './support';
@@ -1039,6 +1040,13 @@ class Plyr {
       this.media.webkitShowPlaybackTargetPicker();
     }
   };
+
+  googlecast = () => {
+    if (!support.googlecast) {
+      return;
+    }
+    googlecast.requestSession(this);
+  }
 
   /**
    * Toggle the player controls

@@ -6,6 +6,7 @@ import { providers } from './config/types';
 import html5 from './html5';
 import media from './media';
 import PreviewThumbnails from './plugins/preview-thumbnails';
+import googlecast from './plugins/google-cast';
 import support from './support';
 import ui from './ui';
 import { createElement, insertElement, removeElement } from './utils/elements';
